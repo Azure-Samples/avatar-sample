@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Web API",
+      "type": "debugpy",
+      "cwd": "${workspaceFolder}\\src\\avatar_engine",
+      "request": "launch",
+      "module": "uvicorn",
+      "env": {
+        "Path": "${env:Path};${workspaceFolder}\\src\\avatar_engine"
+      },
+      "args": ["app.main:app", "--reload", "--port", "8081"],
+      "jinja": true,
+      "justMyCode": false
+    },
+    {
+      "name": "Python Debugger: Python File",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}"
+    }
+  ]
+}

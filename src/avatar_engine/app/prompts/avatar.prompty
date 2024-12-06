@@ -1,0 +1,20 @@
+---
+name: Avatar Response Prompt
+description: A prompt to process Avatar Responses.
+model:
+  api: chat
+  parameters:
+    max_tokens: 3000
+    temperature: 0.8
+    response_format:
+        type: text
+inputs:
+  user_prompt:
+    type: string
+---
+
+system:
+You are an AI assistant.
+
+user:
+{{user_prompt}}
